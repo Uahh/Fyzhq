@@ -1,0 +1,81 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>发音转换器</title>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="https://unpkg.com/element-plus/dist/index.full.js"></script>
+    <link rel="stylesheet" href="./static/css/base.css">
+    <link rel="stylesheet" href="./static/css/bbk.css">
+    <link rel="stylesheet" href="https://unpkg.com/element-plus/dist/index.css" />
+    <meta name="viewport" content="width=device-width,user-scalable=0">
+</head>
+
+<body>
+    <div id="app" style="width:100%;">
+        <div>
+			<label style="text-align:left;"><input type="radio" name="language_type" value="0" checked />日语</label>
+		</div>
+        </br>
+        <div id="el"><textarea placeholder="输入想转换的文字" v-model="input" @blur="convert(input)"></textarea>
+        </div>
+        <br>
+        <div id="el"><textarea readonly="readonly" v-model="result"></textarea></div>
+    </div>
+    <div class="content-box">
+        <h2>这是什么？</h2>
+        <p>发音转换器，可以将中文的发音对应到外语发音，以达到用外语说中文的效果。</p>
+        <p>输入想转换的文字，将得到的结果复制到谷歌翻译等网站即可得到发音。</p>
+        <p>谷歌翻译：<a href="https://translate.google.cn" target="_blank">https://translate.google.cn</a></p>
+        <p>百度翻译：<a href="https://fanyi.baidu.com" target="_blank">https://fanyi.baidu.com</a></p>
+        <h2>参与项目</h2>
+        <p>如您所见，目前能转换的语言只有日语，如果需要添加其他语言，可能需要您的帮助。</p>
+        <p>转换原理是将所有汉语拼音一一对应到外语发音。</p>
+        <p>完成所有的对应可能需要两小时左右，如果想参与项目，可以联系我：</p>
+        <p>邮箱：<a href="hnyrarara@gmail.com" target="_blank">hnyrarara@gmail.com</a></p>
+        <p>微博私信：<a href="https://weibo.com/u/6362460037" target="_blank">https://weibo.com/u/6362460037</a></p>
+        <p>Github：<a href="https://github.com/Uahh/Fyzhqh" target="_blank">https://github.com/Uahh/Fyzhq</a></p>
+        <h2>仓库地址</h2>
+        <p><a href="https://github.com/Uahh/Fyzhqh" target="_blank">🌟https://github.com/Uahh/Fyzhq🌟</a></p>
+    </div>
+    <script type="text/javascript" src="./static/js/pinyin_dict_notone.js"></script>
+    <script type="text/javascript" src="./static/js/pinyinUtil.js"></script>
+    <script>
+        let data;
+        fetch('./data/language.json').then(data => data.json()).then(_data => {
+            data = _data;
+        });
+        const words = {
+            data() {
+                return {
+                    input: "",
+                    result: ""
+                }
+            },
+            methods: {
+                //失去焦点进行转换
+                convert(input) {
+                    let type = document.querySelector('[name="language_type"]:checked').value;
+                    if (type == "0"){
+                        cur_data = data['japanese']
+                    }
+
+                    pinyin = pinyinUtil.getPinyin(input).split(" ");
+                    // console.log(pinyin)
+
+                    this.result = ""
+                    for (let i = 0; i < pinyin.length; i++) {
+                        if (cur_data[pinyin[i]]){
+                            this.result += cur_data[pinyin[i]];
+                        }
+                        else{
+                            this.result += pinyin[i]
+                        }
+                    }
+                }
+            }
+        }
+        const create_button = Vue.createApp(words);
+        create_button.use(ElementPlus);
+        create_button.mount("#app");
+    </script>
