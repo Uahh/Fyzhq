@@ -15,6 +15,7 @@
     <div id="app" style="width:100%;">
         <div>
 			<label style="text-align:left;"><input type="radio" name="language_type" value="0" checked />日语</label>
+			<label style="text-align:left;"><input type="radio" name="language_type" value="1" />德语</label>
 		</div>
         </br>
         <div id="el"><textarea placeholder="输入想转换的文字" v-model="input" @blur="convert(input)"></textarea>
@@ -30,7 +31,7 @@
         <p>百度翻译：<a href="https://fanyi.baidu.com" target="_blank">https://fanyi.baidu.com</a></p>
         <h2>参与项目</h2>
         <p>如您所见，目前能转换的语言只有日语，如果需要添加其他语言，可能需要您的帮助。</p>
-        <p>转换原理是将所有汉语拼音一一对应到外语发音。</p>
+        <p>不需要编程，转换原理是将所有汉语拼音一一对应到外语发音。</p>
         <p>完成所有的对应可能需要两小时左右，如果想参与项目，可以联系我：</p>
         <p>邮箱：<a href="hnyrarara@gmail.com" target="_blank">hnyrarara@gmail.com</a></p>
         <p>微博私信：<a href="https://weibo.com/u/6362460037" target="_blank">https://weibo.com/u/6362460037</a></p>
@@ -58,6 +59,9 @@
                     let type = document.querySelector('[name="language_type"]:checked').value;
                     if (type == "0"){
                         cur_data = data['japanese']
+                    }
+                    else if (type == "1"){
+                        cur_data = data['German']
                     }
 
                     pinyin = pinyinUtil.getPinyin(input).split(" ");
