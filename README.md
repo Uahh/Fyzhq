@@ -22,3 +22,6 @@
 * 微博私信: [https://weibo.com/u/6362460037](https://weibo.com/u/6362460037)
 * Github: [https://github.com/Uahh/Fyzhq](https://github.com/Uahh/Fyzhq)
 
+## 更新
+2022.02.07:  
+新增德语，感谢[@手表摔裂了](https://weibo.com/n/手表摔裂了)
