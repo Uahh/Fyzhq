@@ -14,9 +14,9 @@
 <body>
     <div id="app" style="width:100%;">
         <div>
-			<label style="text-align:left;"><input type="radio" name="language_type" value="0" checked />日语</label>
-			<label style="text-align:left;"><input type="radio" name="language_type" value="1" />德语</label>
-		</div>
+            <label style="text-align:left;"><input type="radio" name="language_type" value="0" checked />日语</label>
+            <label style="text-align:left;"><input type="radio" name="language_type" value="1" />德语</label>
+        </div>
         </br>
         <div id="el"><textarea placeholder="输入想转换的文字" v-model="input" @blur="convert(input)"></textarea>
         </div>
@@ -57,10 +57,10 @@
                 //失去焦点进行转换
                 convert(input) {
                     let type = document.querySelector('[name="language_type"]:checked').value;
-                    if (type == "0"){
-                        cur_data = data['japanese']
+                    if (type == "0") {
+                        cur_data = data['Japanese']
                     }
-                    else if (type == "1"){
+                    else if (type == "1") {
                         cur_data = data['German']
                     }
 
@@ -69,13 +69,13 @@
 
                     this.result = ""
                     for (let i = 0; i < pinyin.length; i++) {
-                        if (cur_data[pinyin[i]]){
+                        if (cur_data[pinyin[i]]) {
                             this.result += cur_data[pinyin[i]];
-                            if (type != 'japanese'){
+                            if (type != 'Japanese') {
                                 this.result += ' '
                             }
                         }
-                        else{
+                        else {
                             this.result += pinyin[i]
                         }
                     }
