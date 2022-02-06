@@ -71,6 +71,9 @@
                     for (let i = 0; i < pinyin.length; i++) {
                         if (cur_data[pinyin[i]]){
                             this.result += cur_data[pinyin[i]];
+                            if (type != 'japanese'){
+                                this.result += ' '
+                            }
                         }
                         else{
                             this.result += pinyin[i]
