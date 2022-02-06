@@ -1,6 +1,7 @@
 # Fyzhq
 ## Fyzhq是什么
-发音转换器，可以将中文的发音对应到外语发音，以达到用外语说中文的效果。
+发音转换器，可以将中文的发音对应到外语发音，以达到用外语说中文的效果。  
+  
 项目网址：
 * [http://uahh.syouzyo.org/fyzhq](http://uahh.syouzyo.org/fyzhq)
 
