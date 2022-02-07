@@ -16,6 +16,7 @@
         <div>
             <label style="text-align:left;"><input type="radio" name="language_type" value="0" checked />日语</label>
             <label style="text-align:left;"><input type="radio" name="language_type" value="1" />德语</label>
+            <label style="text-align:left;"><input type="radio" name="language_type" value="2" />法语</label>
         </div>
         </br>
         <div id="el"><textarea placeholder="输入想转换的文字" v-model="input" @blur="convert(input)"></textarea>
@@ -62,6 +63,9 @@
                     }
                     else if (type == "1") {
                         cur_data = data['German']
+                    }
+                    else if (type == "2") {
+                        cur_data = data['French']
                     }
 
                     pinyin = pinyinUtil.getPinyin(input).split(" ");
