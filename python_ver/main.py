@@ -17,6 +17,18 @@ if sys.argv[1] == "-jp":
 elif sys.argv[1] == "-gm":
     for word in sentence:
         result += language["German"][word[0]]
+elif sys.argv[1] == "-fr":
+    for word in sentence:
+        result += language["French"][word[0]]
+elif sys.argv[1] == "-ru":
+    for word in sentence:
+        result += language["Russian"][word[0]]
+elif sys.argv[1] == "-kr":
+    for word in sentence:
+        result += language["Korean"][word[0]]
+elif sys.argv[1] == "-th":
+    for word in sentence:
+        result += language["Thai"][word[0]]
 else:
     result = "Error"
 
