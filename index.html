@@ -19,6 +19,7 @@
             <label style="text-align:left;"><input type="radio" name="language_type" value="2" />法语</label>
             <label style="text-align:left;"><input type="radio" name="language_type" value="3" />韩语</label>
             <label style="text-align:left;"><input type="radio" name="language_type" value="4" />俄语</label>
+            <label style="text-align:left;"><input type="radio" name="language_type" value="5" />泰语</label>
         </div>
         </br>
         <div id="el"><textarea placeholder="输入想转换的文字" v-model="input" @blur="convert(input)"></textarea>
@@ -74,6 +75,9 @@
                     }
                     else if (type == "4") {
                         cur_data = data['Russian']
+                    }
+                    else if (type == "5") {
+                        cur_data = data['Thai']
                     }
 
                     pinyin = pinyinUtil.getPinyin(input).split(" ");
