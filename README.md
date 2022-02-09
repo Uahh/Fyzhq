@@ -28,6 +28,9 @@
 
 2022.02.08:  
 新增法语，感谢[@Encoreetencore](https://weibo.com/n/Encoreetencore)  
+
 新增韩语，感谢[@白羊的白杨](https://weibo.com/n/白羊的白杨)  
+
 新增俄语，感谢[@航里个夯](https://weibo.com/n/航里个夯)  
+
 新增泰语，感谢[@ShourdReborn](https://weibo.com/n/ShourdReborn)  
