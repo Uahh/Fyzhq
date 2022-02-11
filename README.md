@@ -33,4 +33,4 @@
 新增泰语，感谢[@ShourdReborn](https://weibo.com/n/ShourdReborn)  
 
 2022.02.08:  
-新增英语，感谢[@Polygsu]https://weibo.com/u/3116132815)  
+新增英语，感谢[@Polygsu](https://weibo.com/u/3116132815)  
