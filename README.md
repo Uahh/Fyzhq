@@ -32,5 +32,5 @@
 新增俄语，感谢[@航里个夯](https://weibo.com/n/航里个夯)  
 新增泰语，感谢[@ShourdReborn](https://weibo.com/n/ShourdReborn)  
 
-2022.02.08:  
+2022.02.11:  
 新增英语，感谢[@Polygsu](https://weibo.com/u/3116132815)  
